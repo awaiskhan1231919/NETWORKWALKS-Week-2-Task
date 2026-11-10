@@ -174,7 +174,7 @@ dnsrecon -d networkwalks.com
 - 8 autodiscover SRV records pointing to cPanel
 - No answer to the DNSSEC query, matching the "unsigned" WHOIS status
 
-![DNSRecon output](dnsrecon.png)
+![DNSRecon output](dns-recon.png)
 
 **Why it matters:** DNS data maps the mail and name-server setup and shows how easy email spoofing might be.
 
