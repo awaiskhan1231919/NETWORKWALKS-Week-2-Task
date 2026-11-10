@@ -104,7 +104,7 @@ whatweb networkwalks.com
 - jQuery 3.7.1, Google Tag Manager, and a public contact email on the page
 - WhatWeb also listed "Bootstrap 7.1.4". That matches the WordPress version string, so I treated it as unverified.
 
-![WhatWeb output](screenshots/02_whatweb.png)
+![WhatWeb output](whatweb.png)
 
 **Why it matters:** exact CMS and plugin versions let an attacker look up known vulnerabilities for them.
 
@@ -120,7 +120,7 @@ nslookup networkwalks.com
 - `networkwalks.com` resolves to `192.232.216.135` (non-authoritative answer)
 - This is the same IP that WhatWeb reported
 
-![Nslookup output](screenshots/03_nslookup.png)
+![Nslookup output](nslookup.png)
 
 **Why it matters:** the IP address is the network location of the service and the starting point for further scanning.
 
@@ -139,7 +139,7 @@ curl -I https://networkwalks.com
 - A cookie set with the `Secure` and `HttpOnly` flags
 - No HSTS, CSP, X-Frame-Options or X-Content-Type-Options in the captured output
 
-![Curl output](screenshots/04_curl.png)
+![Curl output](curl.png)
 
 **Why it matters:** headers confirm the software stack and show which browser protections the site does and does not enforce.
 
@@ -155,7 +155,7 @@ wafw00f networkwalks.com
 - The site is behind **ModSecurity (SpiderLabs)**
 - Only 2 requests were needed
 
-![Wafw00f output](screenshots/05_wafw00f.png)
+![Wafw00f output](wafw00f.png)
 
 **Why it matters:** knowing the WAF product tells an attacker what filtering to expect. For the defender, it is a positive control.
 
@@ -174,7 +174,7 @@ dnsrecon -d networkwalks.com
 - 8 autodiscover SRV records pointing to cPanel
 - No answer to the DNSSEC query, matching the "unsigned" WHOIS status
 
-![DNSRecon output](screenshots/06_dnsrecon.png)
+![DNSRecon output](dnsrecon.png)
 
 **Why it matters:** DNS data maps the mail and name-server setup and shows how easy email spoofing might be.
 
@@ -199,7 +199,7 @@ nmap -sn 192.168.205.131/24
 
 The scan checked **256 IP addresses** and found **6 hosts up** in **2.96 seconds**.
 
-![Zenmap ping scan](screenshots/07_zenmap_ping_scan.png)
+![Zenmap ping scan](livehosts.png)
 
 | IP address | MAC address | Vendor |
 |---|---|---|
@@ -218,7 +218,7 @@ All the MAC addresses belong to VMware, which confirms this is a virtual lab net
 I opened the **Topology** tab, used **Legend** to show the key, and **Save Graphic** to export the diagram.
 The scanning machine appears as `localhost` in the centre with the discovered hosts around it.
 
-![Zenmap topology](screenshots/08_zenmap_topology.png)
+![Zenmap topology](topology.png)
 
 **Why it matters:** host discovery is the first step of internal reconnaissance. An attacker would use the
 list to decide which hosts to port-scan next. A defender runs the same scan to confirm that only expected
