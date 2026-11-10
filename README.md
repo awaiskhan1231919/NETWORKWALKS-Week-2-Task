@@ -85,7 +85,7 @@ whois networkwalks.com
 - Name servers: `NS6135.HOSTGATOR.COM` and `NS6136.HOSTGATOR.COM`
 - DNSSEC: unsigned
 
-![WHOIS output](screenshots/01_whois.png)
+![WHOIS output](whois.png)
 
 **Why it matters:** it shows who manages the domain and where DNS is hosted, which tells an attacker
 whose accounts and services are worth targeting.
