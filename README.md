@@ -6,7 +6,7 @@
 This repository explains, step by step, how I completed my Week 2 practical. I footprinted a target
 domain with six Kali Linux tools and scanned my own lab network with Zenmap. Every step has the exact
 command, my screenshot, what I observed, and why it matters. The full report is here:
-[`report/Pentest_Report_Footprinting_and_Scanning.pdf`](report/Pentest_Report_Footprinting_and_Scanning.pdf)
+[`report/Pentest_Report_Footprinting_and_Scanning.pdf`](report/Final_Pentest_Report_Footprinting_and_Scanning.pdf)
 
 ---
 
